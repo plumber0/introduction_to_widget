@@ -57,7 +57,10 @@ class MyScaffold extends StatelessWidget {
         ),
         const Expanded(
           child: Center(
-            child: Text('Hello, world!'),
+            child: Text(
+              'Hello, world!',
+              style: TextStyle(color: Colors.pink, fontSize: 30.0),
+            ),
           ),
         ),
       ],
@@ -66,12 +69,10 @@ class MyScaffold extends StatelessWidget {
 }
 
 void main() {
-  runApp(
-    const MaterialApp(
-      title: 'My app', // used by the OS task switcher
-      home: SafeArea(
-        child: MyScaffold(),
-      ),
-    )
-  );
+  runApp(const MaterialApp(
+    title: 'My app', // used by the OS task switcher
+    home: SafeArea(
+      child: MyScaffold(),
+    ),
+  ));
 }
